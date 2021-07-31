@@ -1,9 +1,20 @@
 import Head from 'next/head';
+import io from 'socket.io-client';
 
 import { Field } from '../src/components';
 import styles from './index.module.css';
 
 const Index = (): JSX.Element => {
+    const socket = io('http://localhost:3000');
+
+    socket.on('message', ({ message }) => {
+        console.log(message);
+    });
+
+    const handleClick = () => {
+        socket.emit('joinRoom');
+    };
+
     return (
         <>
             <Head>Home</Head>
@@ -25,7 +36,7 @@ const Index = (): JSX.Element => {
                             <p>Chat Room</p>
                             <Field></Field>
                         </div>
-                        <button>Join</button>
+                        <button onClick={handleClick}>Join</button>
                     </div>
                 </div>
             </main>
