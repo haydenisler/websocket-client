@@ -1,0 +1,15 @@
+build
+node_modules
+icons
+
+# Config Files
+.gitignore
+debug.log
+
+# JS Config Files
+.eslintrc.js
+tailwind.config.js
+next.config.js
+
+# Misc
+next-env.d.ts
