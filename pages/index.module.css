@@ -1,0 +1,57 @@
+.main {
+    --border-radius: 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.content {
+    color: white;
+    border: 1px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    min-width: 25rem;
+    width: 100%;
+    max-width: 40rem;
+}
+
+.content h1 {
+    margin: 0;
+}
+
+.header {
+    padding: 1rem;
+    background-color: var(--tw-blue-gray-600);
+    border-radius:  var(--border-radius) var(--border-radius) 0 0;
+}
+
+.join {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--tw-blue-gray-700);
+    text-align: left;
+    border-radius:  0 0 var(--border-radius) var(--border-radius);
+
+}
+
+.join button {
+    width: fit-content;
+    padding: 0.25rem 1rem;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.input {
+    width: auto;
+    padding: 1rem;
+}
+
+.input p {
+    padding: 0.5rem 0;
+    margin: 0;
+}
